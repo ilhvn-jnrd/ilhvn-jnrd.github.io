@@ -49,6 +49,44 @@
             text-transform: uppercase;
         }
     </style>
+  
+    <style>
+        body.mode-kalem {
+            background-color: #0f172a !important; /* Biru Malam Gelap */
+            color: #cbd5e1 !important;
+            transition: all 0.8s ease-in-out;
+        }
+        /* Mengubah background terang jadi gelap */
+        body.mode-kalem .bg-white, body.mode-kalem .bg-\[\#f4f0ea\] {
+            background-color: #1e293b !important;
+            border-color: #334155 !important;
+        }
+        /* Melembutkan border hitam tebal */
+        body.mode-kalem .border-black, body.mode-kalem .border-4, body.mode-kalem .border-2 {
+            border-color: #334155 !important;
+        }
+        /* Meredam warna Neon Brutalism menjadi Muted Dark */
+        body.mode-kalem .bg-\[\#ffc900\], body.mode-kalem .bg-\[\#00e5ff\], body.mode-kalem .bg-\[\#ff90e8\], body.mode-kalem .bg-\[\#b8e829\] {
+            background-color: #334155 !important;
+            color: #94a3b8 !important;
+            border-color: #475569 !important;
+        }
+        /* Menyihir Hard Shadow brutal menjadi Soft Glow elegan */
+        body.mode-kalem .brutal-shadow {
+            box-shadow: 0px 10px 25px rgba(0,0,0,0.5) !important;
+            transform: none !important;
+        }
+        /* Menyesuaikan warna teks */
+        body.mode-kalem .text-black, body.mode-kalem p, body.mode-kalem h1, body.mode-kalem h2, body.mode-kalem h3 {
+            color: #e2e8f0 !important;
+        }
+        body.mode-kalem .retro-marquee {
+            background-color: #1e293b !important;
+            border-color: #334155 !important;
+            color: #64748b !important;
+        }
+    </style>
+    
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>💾</text></svg>">
 </head>
 <body class="selection:bg-[#ff90e8] selection:text-black">
@@ -375,6 +413,24 @@
                 pauseIcon.classList.add("hidden");
             }
         }
+    </script>
+
+    <script>
+        function setVibeByTime() {
+            const currentHour = new Date().getHours();
+            // Jika jam 18:00 sore sampai jam 05:59 pagi, aktifkan Mode Kalem
+            if (currentHour >= 18 || currentHour < 6) {
+                document.body.classList.add('mode-kalem');
+            } else {
+                document.body.classList.remove('mode-kalem');
+            }
+        }
+        
+        // Eksekusi saat website pertama kali dibuka
+        setVibeByTime();
+        
+        // Cek secara berkala setiap 1 menit (jika tab dibiarkan terbuka lama)
+        setInterval(setVibeByTime, 60000);
     </script>
     
 </body>
