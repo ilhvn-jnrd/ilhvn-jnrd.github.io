@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Surah Ar-Rahman - Refleksi rasa syukur.">
+    <title>Ilham Januar A | Refleksi Ar-Rahman</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;700;900&family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Amiri:wght@400;700&display=swap');
+        
+        body { 
+            font-family: 'Space Grotesk', sans-serif; 
+            scroll-behavior: smooth; 
+            background-color: #f4f0ea; 
+            color: #111;
+            cursor: crosshair;
+        }
+        .font-mono { font-family: 'Space Mono', monospace; }
+        .font-arabic { font-family: 'Amiri', serif; }
+        
+        .brutal-shadow { box-shadow: 6px 6px 0px 0px rgba(17,17,17,1); }
+        .brutal-shadow-hover:hover {
+            transform: translate(4px, 4px);
+            box-shadow: 2px 2px 0px 0px rgba(17,17,17,1);
+        }
+        
+        /* Tema Malam */
+        body.mode-kalem {
+            background-color: #0f172a !important; color: #cbd5e1 !important; transition: all 0.8s ease-in-out;
+        }
+        body.mode-kalem .bg-white, body.mode-kalem .bg-\[\#f4f0ea\] { background-color: #1e293b !important; border-color: #334155 !important; }
+        body.mode-kalem .border-black, body.mode-kalem .border-4, body.mode-kalem .border-2 { border-color: #334155 !important; }
+        body.mode-kalem .bg-\[\#ffc900\], body.mode-kalem .bg-\[\#00e5ff\], body.mode-kalem .bg-\[\#ff90e8\], body.mode-kalem .bg-\[\#b8e829\] {
+            background-color: #334155 !important; color: #94a3b8 !important; border-color: #475569 !important;
+        }
+        body.mode-kalem .brutal-shadow { box-shadow: 0px 10px 25px rgba(0,0,0,0.5) !important; transform: none !important; }
+        body.mode-kalem .text-black, body.mode-kalem p, body.mode-kalem h1, body.mode-kalem h2, body.mode-kalem h3 { color: #e2e8f0 !important; }
+        
+        a, button { cursor: pointer; }
+    </style>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🤲</text></svg>">
+</head>
+<body class="selection:bg-[#ffc900] selection:text-black">
+
+    <!-- Navigasi -->
+    <nav class="fixed top-0 left-0 right-0 z-50 bg-[#f4f0ea] border-b-4 border-black">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="index.html" class="text-2xl font-black tracking-tighter uppercase">
+                ILHVN<span class="bg-[#00e5ff] px-1 border-2 border-black ml-1 brutal-shadow">JNRD</span>
+            </a>
+            
+            <div class="hidden md:flex gap-8 text-base font-bold font-mono">
+                <a href="index.html#proyek" class="hover:bg-[#ffc900] px-2 border-2 border-transparent hover:border-black transition-colors">/KARYA</a>
+                <a href="index.html#pengalaman" class="hover:bg-[#ff90e8] px-2 border-2 border-transparent hover:border-black transition-colors">/PENGALAMAN</a>
+                <a href="index.html#sertifikasi" class="hover:bg-[#00e5ff] px-2 border-2 border-transparent hover:border-black transition-colors">/SERTIFIKASI</a>
+                <a href="manual.html" class="hover:bg-[#b8e829] px-2 border-2 border-transparent hover:border-black transition-colors">/MANUAL</a>
+                <a href="ar-rahman.html" class="bg-[#ff90e8] px-2 border-2 border-black brutal-shadow transition-colors">/REFLEKSI</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header Section -->
+    <div class="pt-32 pb-12 px-6 relative overflow-hidden">
+        <div class="absolute inset-0 opacity-[0.10] bg-[radial-gradient(#111_2px,transparent_2px)] [background-size:16px_16px]"></div>
+        
+        <div class="max-w-3xl mx-auto relative z-10 text-center">
+            <p class="font-mono font-bold text-sm bg-black text-white px-3 py-1 inline-block border-2 border-black brutal-shadow transform rotate-2 mb-6">
+                [ GET /api/v2/surat/55 ]
+            </p>
+            <h1 class="text-5xl md:text-7xl font-black uppercase mb-6 leading-tight">
+                Surah <br>
+                <span class="bg-[#b8e829] px-4 py-1 border-4 border-black box-decoration-clone">Ar-Rahman</span>
+            </h1>
+            <p class="text-lg font-medium bg-white p-6 border-4 border-black brutal-shadow font-mono text-left inline-block">
+                $ > "Maka nikmat Tuhan kamu yang manakah yang kamu dustakan?" <br><br>
+                Halaman ini menarik data langsung dari REST API Al-Quran. Sebuah pengingat digital untuk senantiasa membumi, menundukkan logika, dan bersyukur atas arsitektur semesta-Nya.
+            </p>
+        </div>
+    </div>
+
+    <!-- API Data Container -->
+    <div class="pb-24 px-6 relative z-10">
+        <div class="max-w-3xl mx-auto" id="quran-container">
+            <!-- Loading State -->
+            <div class="bg-white p-8 border-4 border-black brutal-shadow text-center animate-pulse">
+                <p class="font-mono font-bold text-xl uppercase">Menyambungkan ke Server API...</p>
+                <p class="font-mono text-sm mt-2">Fetching Surah data [||||||||||||||||] 99%</p>
+            </div>
+        </div>
+    </div>
+
+    <footer class="bg-black py-6 text-center border-t-4 border-black font-mono font-bold text-sm uppercase text-white">
+        <p>© 2026 Ilham Januar A. | Real-time Data by EQuran.id</p>
+    </footer>
+
+    <!-- Script API Fetch & Mode Malam -->
+    <script>
+        // Logika Fetch API (Membuktikan keahlian integrasi Backend ke Frontend)
+        async function fetchSurah() {
+            try {
+                const response = await fetch('https://equran.id/api/v2/surat/55');
+                const res = await response.json();
+                const ayatList = res.data.ayat;
+                let htmlContent = '';
+                
+                ayatList.forEach((ayat, index) => {
+                    // Membuat selang-seling warna neon di setiap nomor ayat
+                    const colors = ['#00e5ff', '#ff90e8', '#ffc900', '#b8e829'];
+                    const color = colors[index % 4];
+                    
+                    htmlContent += `
+                    <div class="bg-white p-6 border-4 border-black brutal-shadow mb-8 transform transition-transform hover:-translate-y-1">
+                        <div class="flex justify-between items-center mb-6 border-b-4 border-black pb-4">
+                            <span class="bg-[${color}] text-black px-3 py-1 font-black border-2 border-black font-mono text-lg">Ayat ${ayat.nomorAyat}</span>
+                        </div>
+                        <p class="text-3xl md:text-5xl font-bold text-right leading-[1.8] mb-8 font-arabic text-black" dir="rtl">${ayat.teksArab}</p>
+                        <p class="font-mono font-bold text-sm md:text-base bg-[#f4f0ea] text-black px-3 py-2 border-2 border-black inline-block mb-4 leading-relaxed">${ayat.teksLatin}</p>
+                        <p class="text-black font-medium leading-relaxed text-lg">${ayat.teksIndonesia}</p>
+                    </div>
+                    `;
+                });
+                
+                document.getElementById('quran-container').innerHTML = htmlContent;
+                
+            } catch (error) {
+                document.getElementById('quran-container').innerHTML = `
+                    <div class="bg-[#ff90e8] p-8 border-4 border-black brutal-shadow text-center">
+                        <p class="font-mono font-bold text-xl uppercase mb-2">ERROR 500: API TIMEOUT</p>
+                        <p class="font-mono font-bold text-sm">Gagal mengambil data ayat. Silakan periksa koneksi internet atau refresh halaman.</p>
+                    </div>
+                `;
+            }
+        }
+
+        // Jalankan fungsi API
+        fetchSurah();
+
+        // Sensor Mode Waktu
+        function setVibeByTime() {
+            const currentHour = new Date().getHours();
+            if (currentHour >= 18 || currentHour < 6) {
+                document.body.classList.add('mode-kalem');
+            } else {
+                document.body.classList.remove('mode-kalem');
+            }
+        }
+        setVibeByTime();
+        setInterval(setVibeByTime, 60000);
+    </script>
+</body>
+</html>
