@@ -39,7 +39,7 @@
         
         a, button { cursor: pointer; }
     </style>
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🤲</text></svg>">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.85em%22 x=%22.1em%22 font-size=%2280%22>🤲</text></svg>">
 </head>
 <body class="selection:bg-[#ffc900] selection:text-black">
 
@@ -68,9 +68,9 @@
             <p class="font-mono font-bold text-sm bg-black text-white px-3 py-1 inline-block border-2 border-black brutal-shadow transform rotate-2 mb-6">
                 [ GET /api/v2/surat/55 ]
             </p>
-            <h1 class="text-5xl md:text-7xl font-black uppercase mb-6 leading-tight">
+            <h1 class="text-5xl md:text-7xl font-black uppercase mb-6 leading-[4.5rem] md:leading-[6rem]">
                 Surah <br>
-                <span class="bg-[#b8e829] px-4 py-1 border-4 border-black box-decoration-clone">Ar-Rahman</span>
+                <span class="bg-[#b8e829] px-4 py-1 border-4 border-black box-decoration-clone inline-block mt-2">Ar-Rahman</span>
             </h1>
             <p class="text-lg font-medium bg-white p-6 border-4 border-black brutal-shadow font-mono text-left inline-block">
                 $ > "Maka nikmat Tuhan kamu yang manakah yang kamu dustakan?" <br><br>
@@ -114,7 +114,7 @@
                         <div class="flex justify-between items-center mb-6 border-b-4 border-black pb-4">
                             <span class="bg-[${color}] text-black px-3 py-1 font-black border-2 border-black font-mono text-lg">Ayat ${ayat.nomorAyat}</span>
                         </div>
-                        <p class="text-3xl md:text-5xl font-bold text-right leading-[1.8] mb-8 font-arabic text-black" dir="rtl">${ayat.teksArab}</p>
+                        <p class="text-4xl md:text-5xl font-bold text-right leading-[2.5] md:leading-[3] mb-12 font-arabic text-black py-4" dir="rtl">${ayat.teksArab}</p>
                         <p class="font-mono font-bold text-sm md:text-base bg-[#f4f0ea] text-black px-3 py-2 border-2 border-black inline-block mb-4 leading-relaxed">${ayat.teksLatin}</p>
                         <p class="text-black font-medium leading-relaxed text-lg">${ayat.teksIndonesia}</p>
                     </div>
