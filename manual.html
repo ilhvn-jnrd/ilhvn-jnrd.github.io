@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Manual Book Ilham Januar A. - Panduan cara kerja dan kolaborasi.">
+    <title>Ilham Januar A | User Manual</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;700;900&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap');
+        
+        body { 
+            font-family: 'Space Grotesk', sans-serif; 
+            scroll-behavior: smooth; 
+            background-color: #f4f0ea; 
+            color: #111;
+        }
+        .font-mono { font-family: 'Space Mono', monospace; }
+        
+        .brutal-shadow { box-shadow: 6px 6px 0px 0px rgba(17,17,17,1); }
+        .brutal-shadow-hover:hover {
+            transform: translate(4px, 4px);
+            box-shadow: 2px 2px 0px 0px rgba(17,17,17,1);
+        }
+    </style>
+    <style>
+        body.mode-kalem {
+            background-color: #0f172a !important; color: #cbd5e1 !important; transition: all 0.8s ease-in-out;
+        }
+        body.mode-kalem .bg-white, body.mode-kalem .bg-\[\#f4f0ea\] { background-color: #1e293b !important; border-color: #334155 !important; }
+        body.mode-kalem .border-black, body.mode-kalem .border-4, body.mode-kalem .border-2 { border-color: #334155 !important; }
+        body.mode-kalem .bg-\[\#ffc900\], body.mode-kalem .bg-\[\#00e5ff\], body.mode-kalem .bg-\[\#ff90e8\], body.mode-kalem .bg-\[\#b8e829\] {
+            background-color: #334155 !important; color: #94a3b8 !important; border-color: #475569 !important;
+        }
+        body.mode-kalem .brutal-shadow { box-shadow: 0px 10px 25px rgba(0,0,0,0.5) !important; transform: none !important; }
+        body.mode-kalem .text-black, body.mode-kalem p, body.mode-kalem h1, body.mode-kalem h2, body.mode-kalem h3 { color: #e2e8f0 !important; }
+    </style>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📖</text></svg>">
+</head>
+<body class="selection:bg-[#00e5ff] selection:text-black">
+
+    <nav class="fixed top-0 left-0 right-0 z-50 bg-[#f4f0ea] border-b-4 border-black">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="index.html" class="text-2xl font-black tracking-tighter uppercase">
+                ILHVN<span class="bg-[#00e5ff] px-1 border-2 border-black ml-1 brutal-shadow">JNRD</span>
+            </a>
+            
+            <div class="hidden md:flex gap-8 text-base font-bold font-mono">
+                <a href="index.html#proyek" class="hover:bg-[#ffc900] px-2 border-2 border-transparent hover:border-black transition-colors">/KARYA</a>
+                <a href="index.html#pengalaman" class="hover:bg-[#ff90e8] px-2 border-2 border-transparent hover:border-black transition-colors">/PENGALAMAN</a>
+                <a href="index.html#sertifikasi" class="hover:bg-[#00e5ff] px-2 border-2 border-transparent hover:border-black transition-colors">/SERTIFIKASI</a>
+                <a href="manual.html" class="bg-[#b8e829] px-2 border-2 border-black brutal-shadow transition-colors">/MANUAL</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="pt-32 pb-16 px-6 relative overflow-hidden min-h-screen">
+        <div class="absolute inset-0 opacity-[0.10] bg-[radial-gradient(#111_2px,transparent_2px)] [background-size:16px_16px]"></div>
+        
+        <div class="max-w-4xl mx-auto relative z-10">
+            <div class="mb-12">
+                <p class="font-mono font-bold text-sm bg-black text-white px-3 py-1 inline-block border-2 border-black brutal-shadow mb-4">
+                    [ README.TXT ]
+                </p>
+                <h1 class="text-5xl md:text-6xl font-black uppercase mb-4 leading-tight">
+                    <span class="bg-[#ff90e8] px-2 border-4 border-black box-decoration-clone">Manual Book:</span><br>
+                    Cara Bekerja Sama <br class="hidden md:block">Dengan Saya.
+                </h1>
+                <p class="text-lg font-medium bg-white p-4 border-4 border-black brutal-shadow">
+                    Setiap sistem punya cara kerja. Dokumen ini adalah panduan cepat untuk memahami algoritma kepribadian, gaya kerja, dan cara terbaik berkolaborasi dengan saya.
+                </p>
+            </div>
+
+            <div class="space-y-10">
+                <!-- Kategori 1: Spesifikasi Inti -->
+                <div class="bg-[#f4f0ea] p-8 border-4 border-black brutal-shadow flex flex-col md:flex-row gap-6">
+                    <div class="w-16 h-16 bg-[#ffc900] border-4 border-black text-3xl flex items-center justify-center shrink-0">⚙️</div>
+                    <div>
+                        <h2 class="text-3xl font-black uppercase mb-6 border-b-4 border-black pb-2">Spesifikasi Inti</h2>
+                        
+                        <div class="space-y-6">
+                            <div>
+                                <h3 class="text-xl font-bold bg-[#00e5ff] inline-block px-2 border-2 border-black mb-2">Tipe ISFJ (The Defender)</h3>
+                                <p class="font-mono text-sm font-bold leading-relaxed">Sistem dasar saya berjalan pada logika ISFJ. Saya sangat observan, berempati tinggi, dan selalu memastikan harmoni. Saya pendengar yang baik yang lebih suka bekerja di balik layar memastikan semuanya berjalan sempurna tanpa cacat.</p>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold bg-[#ff90e8] inline-block px-2 border-2 border-black mb-2">Overthinker Module</h3>
+                                <p class="font-mono text-sm font-bold leading-relaxed">Saya pemikir ulung. Semua skenario, risiko, dan detail diproses berkali-kali di kepala saya. Ini membuat hasil kerja saya sangat matang, meski kadang mesin saya terlihat sibuk memikirkan banyak hal.</p>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold bg-[#b8e829] inline-block px-2 border-2 border-black mb-2">Penyakit "Yes-Man"</h3>
+                                <p class="font-mono text-sm font-bold leading-relaxed">Saya punya bug bawaan: sangat sulit bilang "TIDAK" kepada orang lain. Saya cenderung mengiyakan permintaan karena insting alami saya adalah membantu dan menyenangkan rekan tim.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Kategori 2: Protokol Eksekusi Kerja -->
+                <div class="bg-white p-8 border-4 border-black brutal-shadow flex flex-col md:flex-row gap-6">
+                    <div class="w-16 h-16 bg-[#00e5ff] border-4 border-black text-3xl flex items-center justify-center shrink-0">🚀</div>
+                    <div>
+                        <h2 class="text-3xl font-black uppercase mb-6 border-b-4 border-black pb-2">Protokol Kerja</h2>
+                        
+                        <div class="space-y-6">
+                            <div>
+                                <h3 class="text-xl font-bold bg-[#ffc900] inline-block px-2 border-2 border-black mb-2">Strictly Structured</h3>
+                                <p class="font-mono text-sm font-bold leading-relaxed">Saya membenci pekerjaan yang acak-acakan. Memberi saya tugas berarti harus ada timeline yang jelas, manajemen waktu, dan instruksi detail. Keteraturan adalah bahan bakar utama saya.</p>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold bg-[#ff90e8] inline-block px-2 border-2 border-black mb-2">High Adaptability & Hard Worker</h3>
+                                <p class="font-mono text-sm font-bold leading-relaxed">Mesin saya beradaptasi dengan sangat cepat di lingkungan baru. Sekali tujuan ditetapkan, mode "Pekerja Keras" otomatis menyala hingga proyek tersebut tuntas.</p>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold bg-[#b8e829] inline-block px-2 border-2 border-black mb-2">Time Discipline (Anti-Telat)</h3>
+                                <p class="font-mono text-sm font-bold leading-relaxed">Waktu adalah metrik absolut. Saya sangat menghargai ketepatan waktu. Standar operasional saya: tiba 1 jam lebih awal sebelum jadwal yang disepakati.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Kategori 3: Antarmuka Komunikasi -->
+                <div class="bg-[#f4f0ea] p-8 border-4 border-black brutal-shadow flex flex-col md:flex-row gap-6">
+                    <div class="w-16 h-16 bg-[#ff90e8] border-4 border-black text-3xl flex items-center justify-center shrink-0">💬</div>
+                    <div>
+                        <h2 class="text-3xl font-black uppercase mb-6 border-b-4 border-black pb-2">Antarmuka Komunikasi</h2>
+                        
+                        <div class="space-y-6">
+                            <div>
+                                <h3 class="text-xl font-bold bg-[#00e5ff] inline-block px-2 border-2 border-black mb-2">Ping-To-Talk (Small Talk Issue)</h3>
+                                <p class="font-mono text-sm font-bold leading-relaxed">Saya sangat buruk memulai obrolan di luar topik pekerjaan. Saya ingin ngobrol, tapi sistem saya menunggu di-"ping" (ditanya) duluan. Tolong sapa saya duluan, dan saya akan merespon dengan hangat!</p>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold bg-[#ffc900] inline-block px-2 border-2 border-black mb-2">Always-On Mode (Fast Respon)</h3>
+                                <p class="font-mono text-sm font-bold leading-relaxed">Saya adalah jaminan respon kilat dalam kondisi apapun. Pengecualian tunggal: saat status saya sedang "Mengajar/Presentasi", koneksi ke HP atau sosmed akan terputus total.</p>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold bg-[#b8e829] inline-block px-2 border-2 border-black mb-2">Humor Firewall</h3>
+                                <p class="font-mono text-sm font-bold leading-relaxed">Saya sering terlihat terlalu serius. Kadang saya susah diajak bercanda atau loading-nya lama. Entah karena tembok firewall saya terlalu tinggi, atau memang frekuensi jokes kita yang beda server. Jangan menyerah, coba lagi!</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <footer class="bg-black py-6 text-center border-t-4 border-black font-mono font-bold text-sm uppercase text-white">
+        <p>© 2026 Ilham Januar A. | System Documentation.</p>
+    </footer>
+
+    <script>
+        function setVibeByTime() {
+            const currentHour = new Date().getHours();
+            if (currentHour >= 18 || currentHour < 6) {
+                document.body.classList.add('mode-kalem');
+            } else {
+                document.body.classList.remove('mode-kalem');
+            }
+        }
+        setVibeByTime();
+        setInterval(setVibeByTime, 60000);
+    </script>
+</body>
+</html>
