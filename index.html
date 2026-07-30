@@ -52,6 +52,24 @@
             font-weight: 700;
             text-transform: uppercase;
         }
+        /* Animasi Melayang (Motion Design: Staggered Floating) */
+        @keyframes float-brutal {
+            0%, 100% {
+                transform: translate(0, 0);
+                box-shadow: 6px 6px 0px 0px rgba(17,17,17,1);
+            }
+            50% {
+                transform: translate(-4px, -8px); 
+                box-shadow: 10px 14px 0px 0px rgba(17,17,17,1); 
+            }
+        }
+        .animate-float {
+            animation: float-brutal 4s ease-in-out infinite;
+        }
+        .animate-float:hover {
+            animation-play-state: paused;
+        }
+        
     </style>
   
     <style>
